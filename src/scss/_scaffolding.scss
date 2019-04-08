@@ -1,0 +1,253 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 0 rem(20px);
+
+  @media (min-width: $tablet) {}
+
+  @media (min-width: $desktop) {
+
+    padding: 0 rem(88px);
+  }
+}
+
+.wrapper-xl {
+  width: 100%;
+  padding: 0 rem(20px);
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+
+    padding: 0 rem(20px);
+  }
+
+  @media (min-width: $desktop) {
+
+    padding: 0 rem(60px);
+  }
+}
+
+.vertical-padd {
+  padding: rem(80px) 0;
+
+  @media (min-width: $tablet) {
+
+    padding-top: rem(100px);
+  }
+
+  @media (min-width: $desktop) {
+
+    padding-top: rem(160px);
+    padding-bottom: rem(124px);
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: rem(5px) rem(20px) rem(4px);
+
+  z-index: 2;
+
+  text-align: center;
+  border: rem(1px) solid #fff;
+  border-radius: rem(3px);
+
+  color: #fff;
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    background: rgba(0,0,0,0.1);
+  }
+
+  @media (min-width: $tablet) {
+
+    padding: rem(7px) rem(20px) rem(6px);
+  }
+
+  &--licht {
+    // color: $orange;
+    border: none;
+    background: $light-blue;
+
+    &:hover {
+      color: #fff;
+      background: $blue;
+    }
+  }
+}
+
+.quote {
+  position: relative;
+  min-height: rem(240px);
+  width: calc(100% - #{rem(20px)});
+  margin: 0 auto;
+  margin-top: rem(-40px);
+  padding: rem(68px) rem(20px);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  background: $blue;
+  z-index: 100;
+
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 1.25rem 2.5rem;
+
+  .quote__img {
+    position: absolute;
+    width: rem(120px);
+    height: auto;
+    opacity: 0.1;
+    top: 50%;
+    margin-top: rem(-60px);
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+      transform: rotate(180deg);
+    }
+
+    @media (min-width: $tablet) {
+
+      width: rem(270px);
+      margin-top: rem(-135px);
+    }
+  
+    @media (min-width: $desktop) {
+      
+      width: rem(300px);
+      margin-top: rem(-150px);
+    }
+
+  }
+
+  @media (min-width: $tablet) {
+
+    margin-top: rem(-50px);
+  }
+
+  @media (min-width: $desktop) {
+
+    min-height: rem(200px);
+    padding: rem(88px) rem(20px);
+    width: calc(100% - #{rem(100px)});
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: rem(32px);
+    color: #fff;
+    font-weight: 700;
+    font-size: rem(20px);
+    line-height: rem(28px);
+
+    @media (min-width: $tablet) {
+
+      font-size: rem(32px);
+      line-height: rem(48px);
+      letter-spacing: rem(1px);
+    }
+  
+    @media (min-width: $desktop) {
+  
+      font-size: rem(44px);
+      line-height: rem(56px);
+      letter-spacing: rem(2px);    
+    }
+  }
+
+  span {
+    position: relative;
+    padding-top: rem(32px);
+
+    font-size: rem(16px);
+    color: #fff;
+    font-style: italic;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(60px);
+      height: rem(2px);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background: orange;
+    }
+
+    @media (min-width: $tablet) {
+
+      font-size: rem(18px);
+    }
+  
+    @media (min-width: $desktop) {
+  
+      font-size: rem(20px);
+    }
+  }
+}
+
+.wordt-lid {
+  position: relative;
+  width: 100%;
+  padding: rem(40px) 0;
+
+  z-index: 1;
+
+  background: linear-gradient(to bottom right, $blue, $light-blue);
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, $light-blue, $blue);
+
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+  
+  &:hover::before {
+    opacity: 1;
+  }
+
+  @media (min-width: $tablet) {
+
+    padding: rem(60px) 0;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: rem(24px);
+    color: #fff;
+    font-weight: 700;
+    font-size: rem(20px);
+    line-height: rem(28px);
+
+    @media (min-width: $tablet) {
+
+      font-size: rem(24px);
+      line-height: rem(30px);
+      margin-bottom: rem(32px);
+    }
+  
+    @media (min-width: $desktop) {
+  
+      font-size: rem(30px);
+      line-height: rem(42px);
+    }  
+  }
+}

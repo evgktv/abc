@@ -1,0 +1,41 @@
+// Colors
+$white: #FFF;
+$black: #000;
+
+// From layout
+$blue: #006bb7;
+$orange: #f39500;
+$light-blue: #009fe5;
+
+
+$haze: #F6F6F6;
+$grey: #E5E5E5;
+$dark-grey: #999999;
+$green: #0B6827;
+$grey-md: #BEBED1;
+
+
+$base-font: 16;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+  @return strip-unit($num) / $base-font * 1rem;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+$sm: 1150px; /* <= 1150px */
+
+$tablet: 768px;
+$desktop: 1150px;

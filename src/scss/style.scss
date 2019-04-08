@@ -1,0 +1,31 @@
+@import "variables";
+@import "normalize-scss/sass/normalize/import-now";
+// @import "swiper/dist/css/swiper";
+// @import "aos/dist/aos";
+// @import "lity/dist/lity";
+
+@import "variables";
+
+// Common styles
+@import "fonts";
+@import "common";
+@import "scaffolding";
+
+// Vendor styles
+@import "vendor/lity";
+
+// Blocks
+@import "blocks/nav";
+@import "blocks/header";
+@import "blocks/facts";
+@import "blocks/offers";
+@import "blocks/news";
+@import "blocks/poster";
+@import "blocks/sponsors";
+@import "blocks/feedback";
+@import "blocks/map";
+@import "blocks/footer";
+
+
+// Responsive Styles
+@import "responsive";

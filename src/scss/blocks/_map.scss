@@ -1,0 +1,107 @@
+.map {
+  position: relative;
+  width: 100%;
+
+  .wrapper {
+
+    @media (min-width: $tablet) {
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &.vertical-padd {
+    padding-bottom: rem(20px);
+
+    @media (min-width: $tablet) {
+      padding-bottom: rem(20px);
+    }
+  }
+
+  iframe {
+    margin-top: rem(40px);
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      width: 48%;
+    }
+  }
+
+  .btn.btn--licht {
+    margin-top: rem(24px);
+
+    @media (min-width: $tablet) {
+      margin-top: rem(40px);
+    }
+  }
+}
+
+.map__head {
+
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+    width: 100%;
+  }
+
+  span {
+    margin-top: rem(16px);
+    display: block;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      text-align: left;
+    }
+  }
+}
+
+.map__location {
+  margin-top: rem(40px);
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+    width: 48%;
+  }
+}
+
+.map__location-items {
+
+  li {
+    position: relative;
+    margin-top: rem(30px);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      width: calc(100% - 60px);
+      margin: 0;
+
+      @media (min-width: $tablet) {
+        width: calc(100% - 70px);     
+      }
+    }
+
+    svg {
+      width: rem(30px);
+      height: rem(30px);
+      margin-right: rem(20px);
+
+      @media (min-width: $tablet) {
+        width: rem(40px);
+        height: rem(40px);
+        margin-right: rem(30px);      
+      }
+    }
+  }
+}

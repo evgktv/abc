@@ -1,0 +1,139 @@
+.feedback {
+  position: relative;
+  width: 100%;
+  background-image: url("../img//bg/bg-feedback.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  text-align: center;
+
+  .btn.btn--licht {
+    margin-top: rem(24px);
+    padding-left: rem(44px);
+    padding-right: rem(44px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px rem(4px) rem(8px);
+
+    @media (min-width: $tablet) {
+      margin-top: rem(40px);
+      padding-left: rem(60px);
+      padding-right: rem(60px);
+    }
+  }
+}
+
+.feedback__head {
+
+  @media (min-width: $tablet) {
+  }
+
+  span {
+    margin-top: rem(16px);
+    display: block;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+    }
+  }
+}
+
+.feedback__form {
+  margin-top: rem(60px);
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding-top: rem(4px);
+    padding-bottom: rem(8px);
+    margin-bottom: rem(32px);
+
+    background: rgba(245, 244, 244, 0.7);
+    border: none;
+    border-bottom: rem(1px) solid #C4C4C4;
+
+    &::-webkit-input-placeholder {
+      color: rgb(63, 63, 63);
+    }
+
+    &::-moz-placeholder {
+      color: rgb(63, 63, 63);
+    }
+
+    &::-moz-placeholder {
+      color: rgb(63, 63, 63);
+    }
+
+    &::-ms-input-placeholder {
+      color: rgb(63, 63, 63);
+    }
+
+    &:hover {
+      border-bottom: rem(2px) solid $light-blue;
+      margin-bottom: rem(31px);
+    }
+
+    &:focus {
+      border-bottom: rem(2px) solid $blue;
+      margin-bottom: rem(31px);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: rem(60px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop) {
+
+  }
+}
+
+.feedback__inputs {
+
+  @media (min-width: $tablet) {
+
+    width: 48%;
+
+    input {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.feedback__form__textarea {
+  width: 100%;
+  padding: rem(12px);
+  height: rem(200px);
+  resize: none;
+  border: rem(1px) solid #C4C4C4;
+
+  &:hover {
+    outline: rem(2px) solid $light-blue;
+  }
+
+  &:focus {
+    outline: rem(2px) solid $blue;
+  }
+
+  @media (min-width: $tablet) {
+    width: 48%;
+    padding: rem(14px) rem(16px);
+    height: rem(160px);
+
+    &:hover {
+      padding: rem(13px) rem(15px);
+    }
+
+    &:focus {
+      outline: none;
+      padding: rem(13px) rem(15px);
+    }
+  }
+}
+

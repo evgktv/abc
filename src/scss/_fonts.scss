@@ -1,0 +1,25 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Cera Round Pro";
+  font-style: normal;
+
+  src: url("../fonts/CeraRoundProDEMO-Regular.otf") format("opentype"),
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "ubuntu";
+  font-style: normal;
+
+  src: url("../fonts/Ubuntu-R.ttf") format("truetype"),
+  url("../fonts/Ubuntu-R.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+
+  src: url("../fonts/ptsansnarrowbold.woff2") format("woff2"),
+  url("../fonts/ptsansnarrowbold.woff") format("woff");
+}

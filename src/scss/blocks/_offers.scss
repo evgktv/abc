@@ -1,0 +1,40 @@
+.offers {
+  position: relative;
+  width: 100%;
+}
+
+.offers__list {
+
+  @media (min-width: $tablet) {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  @media (min-width: $desktop) {
+  }
+}
+
+.offers__item {
+  padding: rem(32px) rem(16px);
+  margin-top: rem(16px);
+  text-align: center;
+  border: 1px solid rgb(59, 97, 59);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media (min-width: $tablet) {
+
+    padding: rem(44px) rem(20px);
+    margin-top: 0;
+    width: 31%;
+  }
+}
+
+.offers__name {
+  font-weight: 700;
+}
