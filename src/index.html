@@ -8,11 +8,12 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
-  <link rel="stylesheet" href="/static/css/style.css?t=1553182348333" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <link rel="stylesheet" href="static/css/style.css?t=1553182348333" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/css/swiper.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
 
 
   <title></title>
@@ -22,82 +23,147 @@
 
 <body>
 
-  <nav id="menuID" class="nav nav--closed nav--nojs">
+  <nav class="nav">
     <div class="nav__wrapper wrapper-xl">
+      <div class="nav__logo">
+        <a href="/" title="">
+          <img src="./static/img/logo.png" alt="logo" />
+        </a>
+      </div>
+
+      <div class="nav__main">
+        <ul class="nav__items">
+          <li class="nav__item active"">
+                <a href=" #" title="">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" title="">Nieuws</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" title="">Agenda</a>
+          </li>
+          <li class="nav__item nav__item-show">
+            <a href="#" title="">Info
+            </a>
+            <span class="">
+                @@include('./arrow.svg')
+            </span>
+            <ul class="nav__sub-items">
+              <li class="nav__sub-item"><a href="#">Bestuur</a></li>
+              <li class="nav__sub-item"><a href="#">Spellocaties</a></li>
+              <li class="nav__sub-item"><a href="#">Onze vereniging</a></li>
+              <li class="nav__sub-item"><a href="#">Lid worden?</a></li>
+              <li class="nav__sub-item"><a href="#">Inschrijfformulier</a></li>
+              <li class="nav__sub-item"><a href="#">Toernooien</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item-show">
+            <a href="#" title="">Senioren
+            </a>
+            <span class="">
+                @@include('./arrow.svg')
+            </span>
+            <ul class="nav__sub-items">
+              <li class="nav__sub-item"><a href="#">Bestuur</a></li>
+              <li class="nav__sub-item"><a href="#">Spellocaties</a></li>
+              <li class="nav__sub-item"><a href="#">Onze vereniging</a></li>
+              <li class="nav__sub-item"><a href="#">Lid worden?</a></li>
+              <li class="nav__sub-item"><a href="#">Inschrijfformulier</a></li>
+              <li class="nav__sub-item"><a href="#">Toernooien</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" title="">Jeugd</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" title="">Handige Links</a>
+          </li>
+        </ul>
+
+      </div>
 
       <button class="nav__toggle" type="button">Открыть меню</button>
 
-      <ul class="nav__list">
-        <li class="nav__item nav__item--logo">
-          <a href=#index title="">
-            <img src="./static/img/logo.png" alt="logo" />
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="#about">О сервисе</a>
-        </li>
-        <li class="nav__item">
-          <a href="#function">Функции</a>
-        </li>
-        <li class="nav__item">
-          <a href="#opportunity">Возможности</a>
-        </li>
-        <li class="nav__item">
-          <a href="#special">Партнеры</a>
-        </li>
-        <li class="nav__item">
-          <button class="btn btn--menu" type="button">Оставить заявку</button>
-        </li>
-      </ul>
     </div>
   </nav>
 
-
-  <!-- <nav class="menu menu--anchors">
-      <div class="menu__wrapper">
-        <div class="menu__menu">
-          <ul class="menu__items">
-            <li class="menu__item">
-              <a href="#program" title="">Program</a>
-            </li>
-
-            <li class="menu__item">
-              <a href="#dates" title="">Dates and Costs</a>
-            </li>
-
-            <li class="menu__item" title="">
-              <a href="#registration">Registration</a>
-            </li>
-
-            <li class="menu__item" title="">
-              <a href="#location">Location</a>
-            </li>
-          </ul>
-        </div>
-
-        <footer class="menu__footer">
-          <ul class="menu__footer-links">
-            <li>
-              <a href="https://www.facebook.com/www.exupery.lv/" class="fb" title="" target="_blank">
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.youtube.com/channel/UCvNTLJQ4RJ7I4nePwUpzwIQ" class="yt" title="" target="_blank">
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.instagram.com/exupery_international_school/" class="ig" title="" target="_blank">
-              </a>
-            </li>
-          </ul>
-          <a href="./ru.html" class="menu__lang" title="">
-            <span>Ru</span>
-          </a>
-        </footer>
+  <nav class="menu">
+    <div class="menu__top">
+      <div class="nav__logo">
+        <a href="/" title="">
+          <img src="./static/img/logo.png" alt="logo" />
+        </a>
       </div>
-    </nav> -->
+      <button class="nav__toggle close" type="button">
+      </button>
+
+    </div>
+
+    <div class="menu__wrapper">
+      <div class="menu__menu">
+        <ul class="menu__items">
+          <li class="menu__item active">
+            <a href="#" title="">Home</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="#" title="">Nieuws</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="" title="">Agenda</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="#" class="menu__item-show" title="">Info
+              <span class="">
+                @@include('./arrow.svg')
+              </span>
+            </a>
+
+            <ul class="menu__sub-items">
+              <li class="menu__sub-item"><a href="#">Bestuur</a></li>
+              <li class="menu__sub-item"><a href="#">Spellocaties</a></li>
+              <li class="menu__sub-item"><a href="#">Onze vereniging</a></li>
+              <li class="menu__sub-item"><a href="#">Lid worden?</a></li>
+              <li class="menu__sub-item"><a href="#">Inschrijfformulier</a></li>
+              <li class="menu__sub-item"><a href="#">Toernooien</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__item-show" title="">Senioren
+              <span class="">
+                @@include('./arrow.svg')
+              </span>
+            </a>
+            <ul class="menu__sub-items">
+              <li class="menu__sub-item"><a href="#">Bestuur</a></li>
+              <li class="menu__sub-item"><a href="#">Spellocaties</a></li>
+              <li class="menu__sub-item"><a href="#">Onze vereniging</a></li>
+              <li class="menu__sub-item"><a href="#">Lid worden?</a></li>
+              <li class="menu__sub-item"><a href="#">Inschrijfformulier</a></li>
+              <li class="menu__sub-item"><a href="#">Toernooien</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" title="">Jeugd</a>
+          </li>
+          <li class="menu__item">
+            <a href="" title="">Handige Links</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <footer class="menu__footer">
+      <ul class="menu__footer-links">
+        <li>
+          <a href="mailto:secretariaat@abcswindregt.nl">secretariaat@abcswindregt.nl</a>
+        </li>
+      </ul>
+    </footer>
+
+  </nav>
 
   <header class="header">
     <div class="header__slider swiper-container">
@@ -106,7 +172,7 @@
         <div class="header__slider-slide swiper-slide">
           <div class="header__slider-overlay"></div>
           <img src="./static/img/slider/slide-1.jpg" alt="" />
-          <div class="header__slider-slogan">Клуб с богатой историей</div>
+          <div class="header__slider-slogan">ELKE MAANDAG EN DONDERDAG VRIJSPELEN</div>
           <div class="header__slider-logo">
             <img src="./static/img/logo.png" alt="logo" />
           </div>
@@ -165,10 +231,10 @@
   </header>
 
   <section class="quote">
-    <img class="quote__img quote__img--left" src="./static/img/icons/shuttle-1.png" alt="" />
-    <p>Maak badminton jouw sport !!!</p>
-    <span>ABC Zwyndregt</span>
-    <img class="quote__img quote__img--right" src="./static/img/icons/shuttle-1.png" alt="" />
+    <img class="quote__img quote__img--left" src="./static/img/icons/shuttle-1.png" data-aos="fade-up" alt=""/>
+    <p data-aos="fade-up">Maak badminton jouw sport !!!</p>
+    <span data-aos="fade-up">ABC Zwyndregt</span>
+    <img class="quote__img quote__img--right" src="./static/img/icons/shuttle-1.png" data-aos="fade-up" alt=""/>
 
   </section>
 
@@ -177,21 +243,21 @@
     <section class="offers vertical-padd">
       <div class="wrapper">
         <ul class="offers__list">
-          <li class="offers__item">
+          <li class="offers__item" data-aos="fade-right">
             <span class="offers__name">Recreatief badmintonnen</span>
             <p class="offers__text">Op verschillende dagen per week ontspannen badmintonnen in
               Zwijndrecht en Hendrik-Ido-Ambacht.
             </p>
           </li>
 
-          <li class="offers__item">
+          <li class="offers__item" data-aos="fade-up">
             <span class="offers__name">Competitie spelen</span>
             <p class="offers__text">Door de weeks vrij spelen en trainen en in het
               weekend een stevig partijtje competitie badmintonnen.
             </p>
           </li>
 
-          <li class="offers__item">
+          <li class="offers__item" data-aos="fade-left">
             <span class="offers__name">Jeugd badmintonnen.</span>
             <p class="offers__text">Verschillende keren per week trainen en in het weekend
               lekker een competitie wedstrijd.
@@ -203,126 +269,258 @@
 
     <section class="news vertical-padd">
       <div class="wrapper">
-        <div class="news__head">
+        <div class="news__head" data-aos="fade-right">
           <h2>LAATSTE NIEUWS</h2>
           <span>over badmintonnen in Zwijndecht en Hendrik-Ido-Ambacht</span>
+          <div class="news__slider-controls" data-aos="fade-up">
+            <div class="news__slider-prev swiper-button-prev">
+              <svg width="20.000000pt" height="20.000000pt" viewBox="0 0 100.000000 100.000000">
+
+                <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#006bb7" stroke="none">
+                  <path d="M702 939 c-18 -12 -39 -34 -47 -49 -15 -29 -1 -22 -420 -203 l-190
+                             -82 0 -51 c1 -39 7 -62 28 -93 15 -22 27 -50 27 -61 0 -53 82 -150 127 -150 7
+                             0 17 -10 24 -22 27 -54 105 -118 143 -118 8 0 37 -14 64 -30 32 -20 64 -32 92
+                             -33 l43 -2 127 295 c70 162 132 299 138 303 112 88 131 186 52 271 -36 38 -41
+                             40 -106 44 -57 2 -75 -1 -102 -19z m169 -55 c11 -10 24 -34 30 -54 9 -31 8
+                             -44 -6 -74 -31 -66 -47 -65 -120 5 -74 71 -84 92 -59 120 36 40 113 41 155 3z
+                             m-467 -203 c17 -18 13 -22 -111 -98 -187 -116 -171 -111 -189 -68 -8 20 -14
+                             41 -12 47 2 5 69 38 148 73 80 35 145 64 146 64 0 1 9 -8 18 -18z m89 -89 l27
+                             -28 -134 -133 c-148 -148 -150 -148 -205 -85 -19 21 -31 46 -31 62 0 24 17 37
+                             152 120 84 50 155 92 158 92 4 0 18 -13 33 -28z m117 -125 c0 -8 -44 -81 -167
+                             -280 l-23 -37 -40 20 c-21 11 -51 36 -66 56 l-27 35 133 134 134 135 28 -27
+                             c15 -15 28 -31 28 -36z m66 -101 c-88 -208 -112 -259 -124 -263 -22 -9 -84 25
+                             -75 40 4 8 46 75 93 150 79 128 85 135 102 121 15 -15 16 -20 4 -48z" />
+                </g>
+              </svg>
+            </div>
+
+            <div class="news__slider-next swiper-button-next">
+              <svg width="20.000000pt" height="20.000000pt" viewBox="0 0 100.000000 100.000000">
+
+                <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#006bb7" stroke="none">
+                  <path d="M702 939 c-18 -12 -39 -34 -47 -49 -15 -29 -1 -22 -420 -203 l-190
+                             -82 0 -51 c1 -39 7 -62 28 -93 15 -22 27 -50 27 -61 0 -53 82 -150 127 -150 7
+                             0 17 -10 24 -22 27 -54 105 -118 143 -118 8 0 37 -14 64 -30 32 -20 64 -32 92
+                             -33 l43 -2 127 295 c70 162 132 299 138 303 112 88 131 186 52 271 -36 38 -41
+                             40 -106 44 -57 2 -75 -1 -102 -19z m169 -55 c11 -10 24 -34 30 -54 9 -31 8
+                             -44 -6 -74 -31 -66 -47 -65 -120 5 -74 71 -84 92 -59 120 36 40 113 41 155 3z
+                             m-467 -203 c17 -18 13 -22 -111 -98 -187 -116 -171 -111 -189 -68 -8 20 -14
+                             41 -12 47 2 5 69 38 148 73 80 35 145 64 146 64 0 1 9 -8 18 -18z m89 -89 l27
+                             -28 -134 -133 c-148 -148 -150 -148 -205 -85 -19 21 -31 46 -31 62 0 24 17 37
+                             152 120 84 50 155 92 158 92 4 0 18 -13 33 -28z m117 -125 c0 -8 -44 -81 -167
+                             -280 l-23 -37 -40 20 c-21 11 -51 36 -66 56 l-27 35 133 134 134 135 28 -27
+                             c15 -15 28 -31 28 -36z m66 -101 c-88 -208 -112 -259 -124 -263 -22 -9 -84 25
+                             -75 40 4 8 46 75 93 150 79 128 85 135 102 121 15 -15 16 -20 4 -48z" />
+                </g>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
       <div class="news__wrapper">
         <div class="news__slider swiper-container">
+
           <div class="news__slider-wrapper swiper-wrapper">
 
-            <article class="news__slider-slide swiper-slide">
-              <div class="news__slider-img">
+              <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+                  <div class="news__slider-img">
                 <img src="./static/img/news/slider/news1.jpg" alt="" />
               </div>
               <div class="news__slider-content">
                 <span class="news__slider-date">14 maart, 2019</span>
                 <div class="news__text">
-                    <span class="news__slider-title">Armano de Haer werkt graag samen</span>
-                    <p>
-                         Armando de Haer is één van de nieuwe gezichten in het bestuur van 
-                        badmintonvereniging ABC Swindregt. De 27-jarige inwoner van Hendrik-Ido-Ambacht 
-                        is sinds kort voorzitter van de technische commissie.
-                    </p>
+                  <span class="news__slider-title">Armano de Haer werkt graag samen</span>
+                  <p class="news__slider-text">
+                    Armando de Haer is één van de nieuwe gezichten in het bestuur van
+                    badmintonvereniging ABC Swindregt. De 27-jarige inwoner van Hendrik-Ido-Ambacht
+                    is sinds kort voorzitter van de technische commissie.
+                  </p>
                 </div>
-                
+
                 <a class="news__more" href="/news1.html">Read more</a>
               </div>
             </article>
 
-            <article class="news__slider-slide swiper-slide">
-              <div class="news__slider-img">
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+                <div class="news__slider-img">
                 <img src="./static/img/news/slider/news2.jpg" alt="" />
               </div>
               <div class="news__slider-content">
-                <span class="news__slider-date">28 September, 2018</span>
-                <span class="news__slider-title">The school offers</span>
-                <p class="news__slider-text">The school offers a varied and balanced diet that comes
-                  from ninety percent organically farmed produce and is adapted to children's needs.
+                <span class="news__slider-date">14 maart, 2019</span>
+                <span class="news__slider-title">51e Meteoor toernooi 2019</span>
+                <p class="news__slider-text">Op 11 en 12 mei 2019 vind in het Indoorcentrum Veendam (22 banen!)
+                  voor de 51ste keer het internationale Meteoor Masters badminton toernooi
+                  plaats.
                 </p>
                 <a href="/news1.html">Read more</a>
               </div>
             </article>
 
-            <article class="news__slider-slide swiper-slide">
-              <div class="news__slider-img">
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+                <div class="news__slider-img">
                 <img src="./static/img/news/slider/news3.jpg" alt="" />
               </div>
               <div class="news__slider-content">
-                <span class="news__slider-date">28 September, 2018</span>
-                <span class="news__slider-title">The school offers</span>
-                <p class="news__slider-text">The school offers a varied and balanced diet that comes
-                  from ninety percent organically farmed produce and is adapted to children's needs.
+                <span class="news__slider-date">19 januari, 2019</span>
+                <span class="news__slider-title">‘Pokerface’ op de badminton&shy;baan</span>
+                <p class="news__slider-text">Pokerface op de badmintonbaan door Jan J. Timmer.
+                  Met haar 17 lentes behoort Renee den Hartog tot de jonge talenten in de top van badmintonvereniging
+                  ABC-Swindregt.
+                  Extra leuk: ze speelt al sinds haar achtste bij de club.
                 </p>
                 <a href="/news1.html">Read more</a>
               </div>
             </article>
 
-            <article class="news__slider-slide swiper-slide">
-              <div class="news__slider-img">
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+                <div class="news__slider-img">
                 <img src="./static/img/news/slider/news4.jpg" alt="" />
               </div>
               <div class="news__slider-content">
-                <span class="news__slider-date">28 September, 2018</span>
-                <span class="news__slider-title">The school offers</span>
-                <p class="news__slider-text">The school offers a varied and balanced diet that comes
-                  from ninety percent organically farmed produce and is adapted to children's needs.
+                <span class="news__slider-date">29 december, 2018</span>
+                <span class="news__slider-title">Opbrengst Grote Clubactie 2018</span>
+                <p class="news__slider-text">Zoals je waarschijnlijk wel hebt opgemerkt, heeft ABC-Swindregt meegedaan
+                  aan de Grote Clubactie van 2018.
+                  Hiermee hebben we het mooie bedrag van € 326,40 binnengehaald.
                 </p>
                 <a href="/news1.html">Read more</a>
               </div>
             </article>
 
-            <article class="news__slider-slide swiper-slide">
-              <div class="news__slider-img">
-                <img src="./static/img/news/slider/news1.jpg" alt="" />
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+                <div class="news__slider-img">
+                <img src="./static/img/news/slider/news5.jpg" alt="" />
               </div>
               <div class="news__slider-content">
-                <span class="news__slider-date">28 September, 2018</span>
-                <span class="news__slider-title">The school offers</span>
-                <p class="news__slider-text">The school offers a varied and balanced diet that comes
-                  from ninety percent organically farmed produce and is adapted to children's needs.
+                <span class="news__slider-date">4 december, 2018</span>
+                <span class="news__slider-title">Oliebollen / Nieuwaars&shytoernooi 2019</span>
+                <p class="news__slider-text">Om het nieuwe jaar goed te beginnen hebben we op 7 januari 2019
+                  weer het Oliebollen- / Nieuwjaarstoernooi. Een ludiek toernooi met badminton gerelateerde partijtjes.
                 </p>
                 <a href="/news1.html">Read more</a>
               </div>
             </article>
-          </div>
 
-          <div class="header__slider-controls">
-            <div class="header__slider-prev swiper-button-prev">
-            </div>
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+                <div class="news__slider-img">
+                <img src="./static/img/news/slider/news6.jpg" alt="" />
+              </div>
+              <div class="news__slider-content">
+                <span class="news__slider-date">18 september 2018</span>
+                <span class="news__slider-title">ABC-Swindregt heeft een nieuwe trainer</span>
+                <p class="news__slider-text">Badmintonvereniging ABC-Swindregt is het seizoen begonnen
+                  met een nieuwe trainer. Na het vertrek van de vorige trainer is Stefan Vissenberg
+                  aangetrokken om de trainingen te gaan leiden.
+                </p>
+                <a href="/news1.html">Read more</a>
+              </div>
+            </article>
 
-            <div class="header__slider-next swiper-button-next">
-            </div>
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+                <div class="news__slider-img">
+                <img src="./static/img/news/slider/news2.jpg" alt="" />
+              </div>
+              <div class="news__slider-content">
+                <span class="news__slider-date">14 maart, 2019</span>
+                <span class="news__slider-title">51e Meteoor toernooi 2019</span>
+                <p class="news__slider-text">Op 11 en 12 mei 2019 vind in het Indoorcentrum Veendam (22 banen!)
+                  voor de 51ste keer het internationale Meteoor Masters badminton toernooi
+                  plaats.
+                </p>
+                <a href="/news1.html">Read more</a>
+              </div>
+            </article>
+
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+                <div class="news__slider-img">
+                <img src="./static/img/news/slider/news3.jpg" alt="" />
+              </div>
+              <div class="news__slider-content">
+                <span class="news__slider-date">19 januari, 2019</span>
+                <span class="news__slider-title">‘Pokerface’ op de badmintonbaan</span>
+                <p class="news__slider-text">Pokerface op de badmintonbaan door Jan J. Timmer.
+                  Met haar 17 lentes behoort Renee den Hartog tot de jonge talenten in de top van badmintonvereniging
+                  ABC-Swindregt.
+                  Extra leuk: ze speelt al sinds haar achtste bij de club.
+                </p>
+                <a href="/news1.html">Read more</a>
+              </div>
+            </article>
+
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+                <div class="news__slider-img">
+                <img src="./static/img/news/slider/news4.jpg" alt="" />
+              </div>
+              <div class="news__slider-content">
+                <span class="news__slider-date">29 december, 2018</span>
+                <span class="news__slider-title">Opbrengst Grote Clubactie 2018</span>
+                <p class="news__slider-text">Zoals je waarschijnlijk wel hebt opgemerkt, heeft ABC-Swindregt meegedaan
+                  aan de Grote Clubactie van 2018.
+                  Hiermee hebben we het mooie bedrag van € 326,40 binnengehaald.
+                </p>
+                <a href="/news1.html">Read more</a>
+              </div>
+            </article>
+
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+              <div class="news__slider-img">
+                <img src="./static/img/news/slider/news5.jpg" alt="" />
+              </div>
+              <div class="news__slider-content">
+                <span class="news__slider-date">4 december, 2018</span>
+                <span class="news__slider-title">Oliebollen / Nieuwaarstoernooi 2019</span>
+                <p class="news__slider-text">Om het nieuwe jaar goed te beginnen hebben we op 7 januari 2019
+                  weer het Oliebollen- / Nieuwjaarstoernooi. Een ludiek toernooi met badminton gerelateerde partijtjes.
+                </p>
+                <a href="/news1.html">Read more</a>
+              </div>
+            </article>
+
+            <article class="news__slider-slide swiper-slide" data-aos="fade-left">
+              <div class="news__slider-img">
+                <img src="./static/img/news/slider/news6.jpg" alt="" />
+              </div>
+              <div class="news__slider-content">
+                <span class="news__slider-date">18 september 2018</span>
+                <span class="news__slider-title">ABC-Swindregt heeft een nieuwe trainer</span>
+                <p class="news__slider-text">Badmintonvereniging ABC-Swindregt is het seizoen begonnen
+                  met een nieuwe trainer. Na het vertrek van de vorige trainer is Stefan Vissenberg
+                  aangetrokken om de trainingen te gaan leiden.
+                </p>
+                <a href="/news1.html">Read more</a>
+              </div>
+            </article>
+
+
           </div>
         </div>
       </div>
 
-      <a class="btn btn--licht" href="#">Alles nieuws</a>
+      <a class="btn btn--licht" href="#" data-aos="fade-up">Alles nieuws</a>
 
     </section>
 
 
     <section class="wordt-lid">
       <div class="wrapper">
-        <p>WACHT NIET LANGER, WORD LID VAN ABC-SWINDREGT</p>
-        <a class="btn" href="#">Aanmelden</a>
+        <p data-aos="fade-up">WACHT NIET LANGER, WORD LID VAN ABC-SWINDREGT</p>
+        <a class="btn" href="#" data-aos="fade-up">Aanmelden</a>
       </div>
     </section>
 
     <section class="poster vertical-padd">
       <div class="wrapper">
-        <div class="poster__head">
+        <div class="poster__head" data-aos="fade-up">
           <h2>Aankomende evenementen</h2>
         </div>
 
         <ul class="poster__list">
-          <li class="poster__item">
+          <li class="poster__item" data-aos="fade-up">
             <img src="./static/img/poster/poster1.jpg" alt="" />
 
           </li>
 
-          <li class="poster__item">
+          <li class="poster__item" data-aos="fade-up">
             <img src="./static/img/poster/poster2.jpg" alt="" />
 
           </li>
@@ -333,19 +531,19 @@
     <section class="sponsors vertical-padd">
       <div class="wrapper">
 
-        <h2>Sponsoren</h2>
+        <h2 data-aos="fade-up">Sponsoren</h2>
 
         <div class="sponsors__content">
 
           <div class="sponsors__left">
             <ul class="sponsors__list">
-              <li class="sponsors__item">
+              <li class="sponsors__item" data-aos="fade-right">
                 <a href="#">
                   <img src="./static/img/sponsors/sp1.jpg" alt="" />
                 </a>
               </li>
 
-              <li class="sponsors__item">
+              <li class="sponsors__item" data-aos="fade-right">
                 <a href="#">
                   <img src="./static/img/sponsors/sp2.png" alt="" />
                 </a>
@@ -354,19 +552,20 @@
           </div>
 
           <div class="sponsors__right">
-            <h3>SPONSOR WORDEN VAN ABC-SWINDREGT?</h3>
-            <p>Sponsoren maken het verschil. ABC-Swindregt heeft sponsoren nodig om net even wat meer speeltijd
+            <h3 data-aos="fade-left">SPONSOR WORDEN VAN ABC-SWINDREGT?</h3>
+            <p data-aos="fade-left">Sponsoren maken het verschil. ABC-Swindregt heeft sponsoren nodig om net even wat
+              meer speeltijd
               te realiseren, een toernooi te kunnen organiseren en mee te spelen op een hoog niveau.
               Uiteraard zorgen wij ervoor dat onze Sponsoren zichtbaar zijn. Neem voor mogelijkheden
               contact met ons op.
             </p>
-            <p>Daarnaast hebben we ook de mogelijkheid ons te laten sponseren door middel van <a
+            <p data-aos="fade-left">Daarnaast hebben we ook de mogelijkheid ons te laten sponseren door middel van <a
                 href="#">SponsorKliks.</a>
               Door eerst naar Sponsorkliks te gaan bij een aankoop bij aangesloten winkels,
               ontvangt ABC-Swindregt een percentage.
             </p>
 
-            <a class="btn btn--licht" href="#">Lees meer</a>
+            <a class="btn btn--licht" href="#" data-aos="fade-left">Lees meer</a>
           </div>
         </div>
       </div>
@@ -375,23 +574,23 @@
     <section class="feedback vertical-padd">
       <div class="wrapper">
         <div class="feedback__head">
-          <h2>NEEM CONTACT MET ONS OP</h2>
-          <span>Wij zullen uw vraag zo snel mogelijk in behandeling nemen.</span>
+          <h2 data-aos="fade-up">NEEM CONTACT MET ONS OP</h2>
+          <span data-aos="fade-up">Wij zullen uw vraag zo snel mogelijk in behandeling nemen.</span>
         </div>
 
         <form id="contact" class="feedback__form" action="#" method="POST">
-          <div class="feedback__inputs">
+          <div class="feedback__inputs" data-aos="fade-up">
             <input class="feedback__form__box feedback__form__box--name" type="text" name="name" required
               placeholder="Name" />
             <input class="feedback__form__box feedback__form__box--email" type="email" name="mail" required
               placeholder="Email" />
             <input class="feedback__form__box feedback__form__box--phone" type="tel" name="phone" placeholder="Phone" />
           </div>
-          <textarea class="feedback__form__textarea" rows="5" cols="30" name="text" required
-            placeholder="Message"></textarea>
+          <textarea class="feedback__form__textarea" rows="5" cols="30" name="text" required placeholder="Message"
+            data-aos="fade-up"></textarea>
 
-          <button class="btn btn--licht" type="submit">
-            <span>Send</span>
+          <button class="btn btn--licht" type="submit" data-aos="fade-up">
+            <span>Stuur</span>
           </button>
         </form>
       </div>
@@ -399,13 +598,13 @@
 
     <section class="map vertical-padd">
       <div class="wrapper">
-        <div class="map__head">
+        <div class="map__head" data-aos="fade-up">
           <h2>Onze trainingsplaatsen</h2>
           <span>Wij wachten op je in onze club.</span>
         </div>
         <div class="map__location">
           <ul class="map__location-items">
-            <li>
+            <li data-aos="fade-right">
               <svg width="20.000000pt" height="20.000000pt" viewBox="0 0 100.000000 100.000000">
 
                 <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#006bb7" stroke="none">
@@ -426,7 +625,7 @@
               </svg>
               <p>Develhal, Parklaan 5, 3335 LM Zwijndrecht, Nederland</p>
             </li>
-            <li>
+            <li data-aos="fade-right">
               <svg width="20.000000pt" height="20.000000pt" viewBox="0 0 100.000000 100.000000">
 
                 <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#006bb7" stroke="none">
@@ -448,46 +647,81 @@
               <p>De Ridderhal, Hoge Kade 60, 3341 BE Hendrik-Ido-Ambacht, Nederland</p>
             </li>
           </ul>
-          <a class="btn btn--licht" href="#">Kijk volledig</a>
+          <a class="btn btn--licht" href="#" data-aos="fade-right">Kijk volledig</a>
         </div>
 
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d19725.588174115506!2d4.625824617968748!3d51.82993752989976!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2snl!4v1554657405352!5m2!1sru!2snl"
-          width="400" height="400" frameborder="0" style="border:0" allowfullscreen>
+          width="400" height="400" frameborder="0" style="border:0" allowfullscreen data-aos="flip-up">
         </iframe>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrapper">
-
-
-      <ul class="nav__list">
-        <li class="nav__item nav__item--logo">
-          <a href=#index title="">
+    <div class="footer__nav-wrapper wrapper-xl">
+      <div class="footer__nav">
+        <div class="footer__nav-logo">
+          <a href="/" title="">
             <img src="./static/img/logo.png" alt="logo" />
           </a>
+        </div>
+
+        <ul class="footer__nav-items">
+          <li class="footer__nav-item"">
+              <a href=" #" title="">Home</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" title="">Nieuws</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" title="">Agenda</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" title="">Info</a>
+
+            <ul class="footer__nav-sub-items">
+              <li class="footer__nav-sub-item"><a href="#">Bestuur</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Spellocaties</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Onze vereniging</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Lid worden?</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Inschrijfformulier</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Toernooien</a></li>
+            </ul>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" title="">Senioren</a>
+            <ul class="footer__nav-sub-items">
+              <li class="footer__nav-sub-item"><a href="#">Bestuur</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Spellocaties</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Onze vereniging</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Lid worden?</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Inschrijfformulier</a></li>
+              <li class="footer__nav-sub-item"><a href="#">Toernooien</a></li>
+            </ul>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" title="">Jeugd</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" title="">Handige Links</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__mail">
+        <span>Onze mail:</span>
+        <a href="mailto:secretariaat@abcswindregt.nl">secretariaat@abcswindregt.nl</a>
+      </div>
+
+      <ul class="footer__copyright">
+        <li>
+          © 2019 ABC-Swindregt
         </li>
-        <li class="nav__item">
-          <a href="#about">О сервисе</a>
-        </li>
-        <li class="nav__item">
-          <a href="#function">Функции</a>
-        </li>
-        <li class="nav__item">
-          <a href="#opportunity">Возможности</a>
-        </li>
-        <li class="nav__item">
-          <a href="#special">Партнеры</a>
-        </li>
-        <li class="nav__item">
-          <button class="btn btn--menu" type="button">Оставить заявку</button>
+        <li>
+          Developed: <a href="" title="">EvgKtv</a>
         </li>
       </ul>
-
     </div>
-
   </footer>
 
 

@@ -3,22 +3,29 @@
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: hidden;  
+
+  @media (min-width: $tablet) {
+    min-height: rem(633px);
+  }
 }
 
 .header__slider {
+  position: relative;
   width: 100%;
   height: inherit;
+  @media (min-width: $tablet) {
+    min-height: rem(633px);
+  }
 }
 
 .header__slider-wrapper {
   width: 100%;
-  height: inherit;
 }
 
 .header__slider-slide {
   position: relative;
-  height: inherit;
+
   padding-top: rem(60px);
 
   display: flex;
@@ -39,7 +46,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: transparentize(darken($blue, 40%), 0.6);
+    background: transparentize(darken($blue, 50%), 0.6);
   }
 
   >img {
@@ -55,10 +62,11 @@
 }
 
 .header__slider-slogan {
+  margin: 0 20px;
   position: relative;
   z-index: 2;
-  font-size: rem(36px);
-  line-height: 130%;
+  font-size: rem(28px);
+  line-height: 122%;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0.08em;
@@ -68,18 +76,18 @@
   padding: 0 rem(20px);
 
   @media (min-width: $tablet) {
-    font-size: rem(52px);
+    font-size: rem(46px);
   }
 
   @media (min-width: $desktop) {
-    font-size: rem(68px);
+    font-size: rem(60px);
   }
 }
 
 .header__slider-logo {
-  margin-top: rem(12px);
-  margin-bottom: rem(24px);
-  width: rem(180px);
+  margin-top: rem(10px);
+  margin-bottom: rem(18px);
+  width: rem(112px);
   z-index: 2;
   overflow: hidden;
 
@@ -90,5 +98,20 @@
 
   @media (min-width: $tablet) {
     width: rem(240px);
+  }
+}
+
+.header__slider-prev,
+.header__slider-next {
+
+  opacity: 0.5;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }

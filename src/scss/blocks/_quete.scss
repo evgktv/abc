@@ -1,0 +1,116 @@
+.quote {
+  position: relative;
+  min-height: rem(240px);
+  width: calc(100% - #{rem(20px)});
+  margin: 0 auto;
+  margin-top: rem(-30px);
+  padding: rem(68px) rem(20px);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  background: $blue;
+  z-index: 20;
+
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 1.25rem 2.5rem;
+
+  .quote__img {
+    position: absolute;
+    width: rem(120px);
+    height: auto;
+    opacity: 0.1 !important;
+    top: 50%;
+    margin-top: rem(-60px);
+
+    &--left {
+      left: 0;      transform: rotate(180deg);
+
+    }
+
+    &--right {
+      right: 0;
+      transform: rotate(180deg);
+    }
+
+    @media (min-width: $tablet) {
+
+      width: rem(270px);
+      margin-top: rem(-135px);
+    }
+  
+    @media (min-width: $desktop) {
+      
+      width: rem(300px);
+      margin-top: rem(-150px);
+    }
+
+  }
+
+  @media (min-width: $tablet) {
+
+    margin-top: rem(-50px);
+  }
+
+  @media (min-width: $desktop) {
+
+    min-height: rem(200px);
+    padding: rem(88px) rem(20px);
+    width: calc(100% - #{rem(100px)});
+  }
+  
+  p {
+    margin: 0;
+    margin-bottom: rem(32px);
+    color: #fff;
+    font-weight: 700;
+    font-size: rem(20px);
+    line-height: rem(28px);
+
+    @media (min-width: $tablet) {
+
+      font-size: rem(32px);
+      line-height: rem(48px);
+      letter-spacing: rem(1px);
+    }
+  
+    @media (min-width: $desktop) {
+  
+      font-size: rem(44px);
+      line-height: rem(56px);
+      letter-spacing: rem(2px);    
+    }
+  }
+
+  span {
+    position: relative;
+    padding-top: rem(32px);
+
+    font-size: rem(16px);
+    color: #fff;
+    font-style: italic;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(60px);
+      height: rem(2px);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background: orange;
+    }
+
+    @media (min-width: $tablet) {
+
+      font-size: rem(18px);
+    }
+  
+    @media (min-width: $desktop) {
+  
+      font-size: rem(20px);
+    }
+  }
+}

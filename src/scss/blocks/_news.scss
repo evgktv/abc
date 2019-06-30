@@ -11,13 +11,20 @@
 
   .btn.btn--licht{
     box-shadow: rgba(0, 0, 0, 0.3) 0px rem(4px) rem(8px);
+
+    &:active {
+      box-shadow: rgba(0, 0, 0, 0.8) 0px rem(2px) rem(4px);
+    }
   }
 }
 
 .news__head {
+  position: relative;
+  padding-bottom: rem(80px);
 
   @media (min-width: $tablet) {
     text-align: left;
+    padding-bottom: 0;
   }
 
   span {
@@ -72,6 +79,9 @@
   align-items: center;
   justify-content: center;
   text-align: left;
+
+  overflow: hidden;
+  box-sizing: border-box;
 
   background: rgba(245, 244, 244, 0.3);
   border-radius: rem(8px);
@@ -129,11 +139,13 @@
   position: relative;
   padding-left: rem(8px);
   z-index: 10;
+  padding: 0 rem(12px);
 }
 
 .news__text {
   margin-bottom: rem(20px);
   max-height: rem(280px);
+
   overflow: hidden;
 }
 
@@ -161,5 +173,83 @@
 
   @media (min-width: $desktop) {
     font-size: rem(24px);
+  }
+}
+
+.news__slider-controls {
+  height: rem(30px);
+  width: rem( 90px);
+  position: absolute;
+  right: 50%;
+  margin-right: rem(-45px);
+  bottom: 0;
+
+  @media (min-width: $tablet) {
+
+    bottom: 0;
+    right: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop) {
+  }
+}
+
+
+.news__slider-prev,
+.news__slider-next {
+  position: absolute !important;
+  background: transparent;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0.4;
+  top: 100% !important;
+
+  &.swiper-button-disabled {
+    opacity: 0.1 !important;
+  }
+
+  svg {
+    margin-top: rem(-8px);
+    width: rem(30px);
+    height: rem(30px); 
+
+    @media (min-width: $tablet) {
+      width: rem(30px);
+      height: rem(30px);
+    }
+  
+    @media (min-width: $desktop) {
+
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+.news__slider-next {
+
+  right: 0 !important;
+
+  svg {
+    margin-left: rem(-30px);
+    transform: rotate(45deg);
+  }
+}
+
+.news__slider-prev {
+
+  left: 0 !important;
+
+  svg {
+    transform: rotate(225deg);
   }
 }

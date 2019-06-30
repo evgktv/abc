@@ -1,8 +1,147 @@
 .footer {
   position: relative;
   width: 100%;
+  padding-top: rem(48px);
+  padding-bottom: rem(28px);
 
-  background: rgba(16,94,155, 1);
+  background: darken($blue, 20%);
+}
 
-  height: 100px;
+.footer__nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;  
+    flex-wrap: wrap;
+  }
+}
+
+.footer__nav-logo {
+  display: block;
+  width: fit-content;
+  height: rem(60px);
+  margin: 0 auto 0 0;
+  
+  @media (min-width: $tablet) {
+    margin-right: rem(30px);
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: rem(140px);
+  }
+  a {
+    display: block;
+    padding: 0;
+  }
+
+  img {
+    display: block;
+    height: rem(60px);
+    width: auto;
+  }
+}
+
+.footer__nav-items {
+  margin-top: rem(28px);
+
+  @media (min-width: $tablet) {
+
+    margin-top: rem(28px);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    flex-grow: 2;
+  }
+}
+
+.footer__nav-item {
+
+  margin-top: rem(10px);
+
+  @media (min-width: $tablet) {
+
+    margin-top: 0;
+    margin-right: rem(12px);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.footer__nav-sub-items {
+  margin-left: rem(20px);
+
+  @media (min-width: $tablet) {
+
+    margin-left: rem(0);
+  }
+}
+
+.footer__nav-sub-item  {
+  a {
+    color: darken($white, 30%);
+  }
+}
+
+.footer__mail {
+  margin-top: rem(36px);
+  text-align: center;
+
+  span {
+    display: block;
+    color: $white;
+    font-weight: 700;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.footer__copyright {
+  margin-top: rem(36px);
+  text-align: center;
+
+  @media (min-width: $desktop) {
+
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    display: block;
+    color: darken($white, 40%);
+    margin-bottom: rem(24px);
+
+    &:last-child {
+      font-size: rem(12px);
+      margin: 0;
+    }
+  
+  }
 }
