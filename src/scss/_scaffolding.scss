@@ -108,7 +108,7 @@
 .wordt-lid {
   position: relative;
   width: 100%;
-  padding: rem(60px) 0;
+  padding: rem(80px) 0;
 
   z-index: 1;
 
@@ -135,9 +135,13 @@
 
   @media (min-width: $tablet) {
 
-    padding: rem(88px) 0;
+    padding: rem(100px) 0;
   }
 
+  @media (min-width: $desktop) {
+
+    padding: rem(120px) 0;
+  }
   p {
     margin: 0;
     margin-bottom: rem(24px);

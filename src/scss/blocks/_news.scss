@@ -8,6 +8,7 @@
   background-attachment: fixed;
   background-position: 50% 50%;
   text-align: center;
+  overflow: hidden;
 
   .btn.btn--licht{
     box-shadow: rgba(0, 0, 0, 0.3) 0px rem(4px) rem(8px);
@@ -86,7 +87,6 @@
   background: rgba(245, 244, 244, 0.3);
   border-radius: rem(8px);
   box-shadow: rgba(0, 0, 0, 0.2) 0px rem(8px) rem(20px);
-
 
   &--noslider {
     height: rem(360px);

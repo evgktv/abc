@@ -735,7 +735,7 @@ h2::after {
 .wordt-lid {
   position: relative;
   width: 100%;
-  padding: 3.75rem 0;
+  padding: 5rem 0;
   z-index: 1;
   background: -webkit-gradient(linear, left top, right bottom, from(#006bb7), to(#009fe5));
   background: -o-linear-gradient(top left, #006bb7, #009fe5);
@@ -766,7 +766,13 @@ h2::after {
 
 @media (min-width: 768px) {
   .wordt-lid {
-    padding: 5.5rem 0;
+    padding: 6.25rem 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .wordt-lid {
+    padding: 7.5rem 0;
   }
 }
 
@@ -1000,8 +1006,6 @@ h2::after {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  width: -webkit-calc(100% - 2.5rem);
-  width: calc(100% - 2.5rem);
   min-height: inherit;
   margin: 0 auto;
 }
@@ -1969,6 +1973,7 @@ h2::after {
   background-attachment: fixed;
   background-position: 50% 50%;
   text-align: center;
+  overflow: hidden;
 }
 
 .news .btn.btn--licht {
