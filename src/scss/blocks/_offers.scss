@@ -21,11 +21,11 @@
 
 .offers__item {
   position: relative;
-  padding: rem(32px) rem(16px);
-  margin-top: rem(16px);
+  padding: rem(64px) rem(16px) rem(40);
+  margin-top: rem(64px);
   text-align: center;
   border: rem(1px) solid $orange;
-  box-shadow: 0 rem(4px) rem(8px) rgba(50, 10, 20, 0.4);
+  box-shadow: 0 rem(3px) rem(7px) rgba(50, 10, 20, 0.4);
   border-radius: rem(6px);
 
   &:first-child {
@@ -49,6 +49,7 @@
   @media (min-width: $tablet) {
 
     padding: rem(88px) rem(20px) rem(64px);
+    box-shadow: 0 rem(4px) rem(8px) rgba(50, 10, 20, 0.4);
     margin-top: 0;
     width: 31%;
   }
