@@ -505,6 +505,8 @@ body {
   letter-spacing: 0.04em;
   color: #383838;
   background: #fff;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body.overflow {
@@ -842,7 +844,7 @@ h2::after {
   left: 0;
   z-index: 100;
   width: 100%;
-  min-height: 5.25rem;
+  min-height: 5.625rem;
   background: transparent;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -851,6 +853,7 @@ h2::after {
   -webkit-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
   transition: all 0.6s ease;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -931,7 +934,7 @@ h2::after {
 }
 
 .nav__toggle.close {
-  right: 1.25rem;
+  right: 0rem;
 }
 
 .nav__toggle.close::before {
@@ -1657,6 +1660,7 @@ h2::after {
 
 .header__slider-slide {
   position: relative;
+  width: 100%;
   padding-top: 3.75rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1794,6 +1798,7 @@ h2::after {
   z-index: 20;
   -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 1.25rem 2.5rem;
           box-shadow: rgba(0, 0, 0, 0.45) 0px 1.25rem 2.5rem;
+  overflow: hidden;
 }
 
 .quote .quote__img {
@@ -1914,11 +1919,13 @@ h2::after {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
+  overflow: hidden;
 }
 
 .offers {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -2254,6 +2261,7 @@ h2::after {
   background-attachment: fixed;
   background-position: 50% 50%;
   text-align: center;
+  overflow: hidden;
 }
 
 .poster__head {
@@ -2326,6 +2334,7 @@ h2::after {
   position: relative;
   width: 100%;
   text-align: center;
+  overflow: hidden;
 }
 
 .sponsors__content {
@@ -2420,6 +2429,7 @@ h2::after {
   background-attachment: fixed;
   background-position: 50% 50%;
   text-align: center;
+  overflow: hidden;
 }
 
 .feedback .btn.btn--licht {
@@ -2554,6 +2564,7 @@ h2::after {
 .map {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -2699,6 +2710,7 @@ h2::after {
   padding-top: 3rem;
   padding-bottom: 1.75rem;
   background: #002f51;
+  overflow: hidden;
 }
 
 .footer__nav {

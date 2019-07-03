@@ -5,10 +5,11 @@
   left: 0;
   z-index: 100;
   width: 100%;
-  min-height: rem(84px);
+  min-height: rem(90px);
   background: transparent;
   user-select: none;
   transition: all 0.6s ease;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     
@@ -101,7 +102,7 @@
 
   &.close {
 
-    right: rem(20px);
+    right: rem(0px);
 
     &::before {
       content: "";
