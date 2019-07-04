@@ -774,7 +774,7 @@ h2::after {
 
 @media (min-width: 1150px) {
   .wordt-lid {
-    padding: 7.5rem 0;
+    padding: 10rem 0;
   }
 }
 
@@ -1963,19 +1963,48 @@ h2::after {
   margin-top: 0;
 }
 
-.offers__item::after {
+.offers__item:nth-child(2n +1) .offers__item-decor img {
+  -webkit-transform: scale(1, -1);
+      -ms-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.offers__item:nth-child(2n) .offers__item-decor img {
+  -webkit-transform: scale(-1, -1);
+      -ms-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.offers__item .offers__item-decor {
   content: "";
   position: absolute;
   width: 100px;
   height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
   top: -40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: #fff;
   border: 1px solid #f39500;
   border-radius: 0.375rem;
+  background: #fff;
+}
+
+.offers__item .offers__item-decor img {
+  display: block;
 }
 
 @media (min-width: 768px) {
